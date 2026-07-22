@@ -1,0 +1,8 @@
+# DEPRECATED — old clear-based animator removed (it called `clear` every frame).
+# The modular suite lives in ~/.zsh-suite/ and is loaded from ~/.zshrc.
+# This file is kept so any leftover `source ~/.zsh_prod_suite` is a no-op / safe redirect.
+
+# If the modular suite has not loaded yet, load it once (no double-banner).
+if [[ -z ${_SUITE_LOADED:-} && -f "$HOME/.zsh-suite/loader.zsh" ]]; then
+    source "$HOME/.zsh-suite/loader.zsh"
+fi

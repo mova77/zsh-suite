@@ -1,0 +1,9 @@
+# The syntax is "key = value". The whitespace around the equals doesn't matter.
+
+config-file = ?auto/theme.ghostty
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+font-family = JetBrains Mono
+font-size = 16
+# Slightly roomier line height so ASCII art / prompt feel less cramped
+adjust-cell-height = 10%

@@ -1,0 +1,40 @@
+typeset -g -a _SUITE_LABELS
+_SUITE_LABELS=(
+    "💻 [System]   .. ... .... .....  \e[90m# Multi-level directory jump\e[0m"
+    "💻 [System]   mkd()              \e[90m# Create and enter directory\e[0m"
+    "💻 [System]   ducks              \e[90m# List top 10 disk hogs\e[0m"
+    "💻 [System]   clip / paste       \e[90m# Clipboard read/write\e[0m"
+    "💻 [System]   cpfile             \e[90m# Copy file contents to clipboard\e[0m"
+    "💻 [System]   cls                \e[90m# Clear terminal scrollback buffer\e[0m"
+    "💻 [System]   pathls()           \e[90m# Print PATH one entry per line\e[0m"
+    "💻 [System]   killport()         \e[90m# Kill process listening on a port\e[0m"
+    "💻 [System]   note()             \e[90m# Append dated note (or clipboard)\e[0m"
+    "📦 [DevBox]   extract()          \e[90m# Multi-format smart unarchiver\e[0m"
+    "📦 [DevBox]   serve()            \e[90m# HTTP server [dir] [port]\e[0m"
+    "📦 [DevBox]   port()             \e[90m# Find process listening on a port\e[0m"
+    "📦 [DevBox]   bak()              \e[90m# Create an instant .bak file copy\e[0m"
+    "📦 [DevBox]   histg              \e[90m# Search command history via grep\e[0m"
+    "📦 [DevBox]   json()             \e[90m# Pretty-print JSON (file/stdin/clip)\e[0m"
+    "📦 [DevBox]   up()               \e[90m# brew update && upgrade\e[0m"
+    "📦 [DevBox]   nr() / ni          \e[90m# npm run / npm install\e[0m"
+    "🐙 [GitOps]   gcap()             \e[90m# Stage all changes and commit\e[0m"
+    "🐙 [GitOps]   gco()              \e[90m# Smart checkout or branch creation\e[0m"
+    "🐙 [GitOps]   gclean()           \e[90m# Purge merged local git branches\e[0m"
+    "🐙 [GitOps]   glog               \e[90m# Visual commit tree graph\e[0m"
+    "🐙 [GitOps]   gundo              \e[90m# Undo the last local commit\e[0m"
+    "🐙 [GitOps]   gpr()              \e[90m# Push branch + create GitHub PR\e[0m"
+    "🐳 [Containers] dps()            \e[90m# docker ps (pretty table)\e[0m"
+    "🐳 [Containers] dsh()            \e[90m# Shell into a container\e[0m"
+    "☸️  [K8s]      kctx()             \e[90m# Show/switch kubectl context\e[0m"
+    "🌐 [NetUtils] myip               \e[90m# Fetch public IP details & location\e[0m"
+    "🌐 [NetUtils] pingg              \e[90m# Quick ping check via Google DNS\e[0m"
+    "🌐 [NetUtils] weather()          \e[90m# 3-day terminal weather report\e[0m"
+    "🌐 [NetUtils] genpass            \e[90m# Generate secure 20-char password\e[0m"
+    "🌐 [NetUtils] sandbox()          \e[90m# Disposable temporary /tmp shell\e[0m"
+)
+
+suite-list() {
+    printf "\n\e[1;36m📋 Custom Zsh Suite Quick Reference (%d helpers):\e[0m\n" "${#_SUITE_LABELS[@]}"
+    for item in "${_SUITE_LABELS[@]}"; do printf "  \e[32m✔\e[0m %b\n" "$item"; done
+    printf "\n"
+}

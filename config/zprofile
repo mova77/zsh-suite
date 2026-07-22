@@ -1,0 +1,17 @@
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/mova/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Added by Antigravity CLI installer
+export PATH="$PATH:/Users/mova/.local/bin"
+
+
+
+# Zsh suite loads once from ~/.zshrc (modular ~/.zsh-suite/loader.zsh).
+# Do NOT source ~/.zsh_prod_suite here — the old file used `clear` every
+# animation frame and caused severe flicker (and double-loaded with .zshrc).
