@@ -223,7 +223,7 @@ sandbox() {
 }
 
 # 🧠 Meta-cli thin wrappers (multi-engine fan-out — only if `meta` is on PATH)
-# Full tool: https://github.com/mova77/meta-cli — logic does NOT live in this suite.
+# Full tool: https://github.com/meta-aos/meta-cli — logic does NOT live in this suite.
 if command -v meta >/dev/null 2>&1; then
     alias mwhich='meta which'
     alias mrun='meta run'

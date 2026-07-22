@@ -93,7 +93,7 @@ mwhich              # meta-cli providers (if `meta` on PATH)
 ### Optional: meta-cli
 
 Thin aliases only — no agent orchestration in this suite. Install
-[meta-cli](https://github.com/mova77/meta-cli) and put `meta` on `PATH`:
+[meta-cli](https://github.com/meta-aos/meta-cli) and put `meta` on `PATH`:
 
 ```zsh
 mwhich                          # installed providers
