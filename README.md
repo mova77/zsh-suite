@@ -2,7 +2,7 @@
 
 **Modular Zsh productivity suite** — a small set of everyday helpers, tab completions, and a flicker-free startup banner that scales to your terminal window.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![Shell](https://img.shields.io/badge/shell-zsh-blue.svg)](#requirements)
 
 | | |
@@ -330,7 +330,11 @@ Contributions welcome: keep helpers small, document them in `labels.zsh`, and av
 
 ## License
 
-MIT — use and adapt freely. See repository license if present; otherwise treat as MIT unless noted otherwise.
+This project is licensed under the **GNU General Public License v3.0** (or later, at your option, where permitted by the license text).
+
+See the full terms in [`LICENSE`](LICENSE).
+
+In short: you may run, study, share, and modify this software, provided derivative works remain under GPL-3.0 (copyleft).
 
 ---
 
