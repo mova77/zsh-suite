@@ -52,6 +52,45 @@ _suite_completions() {
         fi
     }
     compdef _comp_nr nr
+
+    # meta-cli providers for thin wrappers (if installed)
+    if command -v meta >/dev/null 2>&1; then
+        _comp_meta_providers() {
+            local -a providers
+            providers=(
+                'claude:Claude Code CLI'
+                'gemini:Gemini CLI'
+                'grok:Grok Build CLI'
+                'codex:OpenAI Codex CLI'
+            )
+            _describe 'providers' providers
+        }
+        _comp_mrun() {
+            _arguments \
+                '-p[provider]:provider:_comp_meta_providers' \
+                '--providers[providers]:provider:_comp_meta_providers' \
+                '--dry-run[print commands only]' \
+                '--yolo[auto-approve when supported]' \
+                '-C[cwd]:directory:_files -/' \
+                '-t[timeout seconds]' \
+                '-o[runs parent dir]:directory:_files -/' \
+                '--[prompt follows]'
+        }
+        _comp_mfan() {
+            _arguments \
+                '-p[providers comma-separated]:providers:' \
+                '-w[workers]:count:' \
+                '--dry-run[print commands only]' \
+                '--yolo[auto-approve when supported]' \
+                '-C[cwd]:directory:_files -/' \
+                '-t[timeout seconds]' \
+                '-o[runs parent dir]:directory:_files -/' \
+                '--[prompt follows]'
+        }
+        compdef _comp_mrun mrun
+        compdef _comp_mfan mfan
+        compdef _comp_mrun meta
+    fi
 }
 _suite_completions
 unset -f _suite_completions

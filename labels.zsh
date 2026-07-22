@@ -31,6 +31,7 @@ _SUITE_LABELS=(
     "🌐 [NetUtils] weather()          \e[90m# 3-day terminal weather report\e[0m"
     "🌐 [NetUtils] genpass            \e[90m# Generate secure 20-char password\e[0m"
     "🌐 [NetUtils] sandbox()          \e[90m# Disposable temporary /tmp shell\e[0m"
+    "🧠 [MetaCLI]  mwhich / mrun / mfan / mcollect  \e[90m# meta-cli wrappers (if installed)\e[0m"
 )
 
 suite-list() {

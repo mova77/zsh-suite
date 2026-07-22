@@ -221,3 +221,12 @@ sandbox() {
     dir="/tmp/sandbox_$rand"
     mkdir -p "$dir" && cd "$dir" && zsh && rm -rf "$dir"
 }
+
+# 🧠 Meta-cli thin wrappers (multi-engine fan-out — only if `meta` is on PATH)
+# Full tool: https://github.com/mova77/meta-cli — logic does NOT live in this suite.
+if command -v meta >/dev/null 2>&1; then
+    alias mwhich='meta which'
+    alias mrun='meta run'
+    alias mfan='meta fan'
+    alias mcollect='meta collect'
+fi

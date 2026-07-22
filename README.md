@@ -87,6 +87,19 @@ gpr                 # push branch + open GitHub PR
 dps                 # pretty docker ps
 json package.json   # pretty-print JSON
 note "shipped gpr"  # append to ~/notes/YYYY-MM-DD.md
+mwhich              # meta-cli providers (if `meta` on PATH)
+```
+
+### Optional: meta-cli
+
+Thin aliases only — no agent orchestration in this suite. Install
+[meta-cli](https://github.com/mova77/meta-cli) and put `meta` on `PATH`:
+
+```zsh
+mwhich                          # installed providers
+mrun -p claude -- "…"           # single engine
+mfan -p claude,gemini,grok -- "…"  # cross-provider fan-out
+mcollect --run-id <id>          # markdown summary
 ```
 
 ---
